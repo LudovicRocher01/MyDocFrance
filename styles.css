@@ -1,0 +1,112 @@
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Animation du dégradé hero */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #2563eb, #7c3aed, #10b981);
+            background-size: 300% 300%;
+            animation: gradientShift 12s ease infinite;
+        }
+
+        /* Effet glassmorphisme */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Animation des cartes fonctionnalités */
+        .feature-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Animation du SVG */
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        /* Styles pour mobile */
+        @media (max-width: 767px) {
+            .hero-gradient {
+                background: linear-gradient(135deg, #2563eb, #7c3aed, #10b981);
+                background-size: 300% 300%;
+                animation: gradientShift 12s ease infinite;
+            }
+
+            .glass-card {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .feature-card {
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+
+            .feature-card:hover {
+                transform: translateY(-10px) scale(1.02);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+
+            /* Ajoutez des styles spécifiques pour mobile ici */
+            .glass-card {
+                margin-bottom: 20px;
+            }
+
+            .grid {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .grid-cols-2, .grid-cols-3 {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* Ajuster le conteneur du code pour mobile */
+            .code-container {
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            .code-container pre {
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+        }

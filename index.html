@@ -19,125 +19,11 @@
 
     <!-- CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Style personnalisé avec animations avancées -->
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #10b981;
-        }
-
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-
-        /* Animation du dégradé hero */
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .hero-gradient {
-            background: linear-gradient(135deg, #2563eb, #7c3aed, #10b981);
-            background-size: 300% 300%;
-            animation: gradientShift 12s ease infinite;
-        }
-
-        /* Effet glassmorphisme */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        /* Animation des cartes fonctionnalités */
-        .feature-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .feature-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        /* Animation du SVG */
-        .pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary);
-            border-radius: 4px;
-        }
-
-        /* Styles pour mobile */
-        @media (max-width: 767px) {
-            .hero-gradient {
-                background: linear-gradient(135deg, #2563eb, #7c3aed, #10b981);
-                background-size: 300% 300%;
-                animation: gradientShift 12s ease infinite;
-            }
-
-            .glass-card {
-                background: rgba(255, 255, 255, 0.1);
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-                border: 1px solid rgba(255, 255, 255, 0.2);
-            }
-
-            .feature-card {
-                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            }
-
-            .feature-card:hover {
-                transform: translateY(-10px) scale(1.02);
-                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            }
-
-            /* Ajoutez des styles spécifiques pour mobile ici */
-            .glass-card {
-                margin-bottom: 20px;
-            }
-
-            .grid {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .grid-cols-2, .grid-cols-3 {
-                grid-template-columns: 1fr !important;
-            }
-
-            /* Ajuster le conteneur du code pour mobile */
-            .code-container {
-                width: 100%;
-                overflow-x: auto;
-            }
-
-            .code-container pre {
-                white-space: pre-wrap;
-                word-wrap: break-word;
-            }
-        }
-    </style>
 </head>
 <body class="antialiased text-gray-800 bg-gray-50">
     <!-- Navigation avancée -->
@@ -627,7 +513,7 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 hover:scale-105" data-aos="flip-left">
                     <div class="relative group">
-                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQF5T1QZg9ugtg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684007745923?e=1752105600&v=beta&t=7LGoLjApTcus0OysTDkzCpsMMbteXHjTPnEoGt6YfOs"
+                        <img src="images/victor_veduta.jpg"
                              alt="Victor Veduta"
                              class="w-full h-64 object-cover rounded-xl mb-6">
                         <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-20 rounded-xl transition duration-300"></div>
@@ -647,7 +533,7 @@
 
                 <div class="bg-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 hover:scale-105" data-aos="flip-left" data-aos-delay="200">
                     <div class="relative group">
-                        <img src="https://www.rollerenligne.com/wp-content/uploads/2023/07/portrait-sebastien-rastegar-redbull-crashed-ice.jpg"
+                        <img src="images/sebastien_rastegar.jpg"
                              alt="Sébastien Rastegar"
                              class="w-full h-64 object-cover rounded-xl mb-6">
                         <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-20 rounded-xl transition duration-300"></div>
@@ -667,7 +553,7 @@
 
                 <div class="bg-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 hover:scale-105" data-aos="flip-left" data-aos-delay="400">
                     <div class="relative group">
-                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQH83hZHaAc2FQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1712939799236?e=2147483647&v=beta&t=g7hgnaFWMmfVB51wRkFnD_f9vE-HKjnflPxYB1dSIhA"
+                        <img src="images/ludovic_rocher.jpg"
                              alt="Ludovic Rocher"
                              class="w-full h-64 object-cover rounded-xl mb-6">
                         <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-20 rounded-xl transition duration-300"></div>
@@ -914,61 +800,8 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialisation des animations
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-
-        // Effet de navbar au scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-white', 'shadow-md', 'text-gray-800');
-                navbar.classList.remove('bg-transparent', 'text-white');
-            } else {
-                navbar.classList.add('bg-transparent', 'text-white');
-                navbar.classList.remove('bg-white', 'shadow-md', 'text-gray-800');
-            }
-        });
-
-        // Menu mobile
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            // Implémentez ici le menu mobile si nécessaire
-            alert("Menu mobile à implémenter");
-        });
-
-        // Compteurs animés
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            const speed = 200;
-
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                const increment = target / speed;
-
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(animateCounters, 1);
-                } else {
-                    counter.innerText = target;
-                }
-            });
-        }
-
-        // Déclenchement des compteurs quand la section est visible
-        // (À implémenter avec Intersection Observer pour une meilleure performance)
-        window.addEventListener('scroll', function() {
-            // Logique simplifiée pour l'exemple
-            if (window.scrollY > document.getElementById('marche').offsetTop - 500) {
-                animateCounters();
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
