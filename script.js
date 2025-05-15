@@ -10,12 +10,15 @@
             if (window.scrollY > 50) {
                 navbar.classList.add('bg-white', 'shadow-md', 'text-gray-800');
                 navbar.classList.remove('bg-transparent', 'text-white');
+                navbar.classList.add('navbar-scrolled');
             } else {
                 navbar.classList.add('bg-transparent', 'text-white');
                 navbar.classList.remove('bg-white', 'shadow-md', 'text-gray-800');
+                navbar.classList.remove('navbar-scrolled');
+
             }
         });
-
+    
         // Menu mobile
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             // Implémentez ici le menu mobile si nécessaire

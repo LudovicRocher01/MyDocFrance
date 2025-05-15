@@ -10,6 +10,10 @@
             overflow-x: hidden;
         }
 
+        .navbar-scrolled {
+            background-color: rgba(0, 0, 0, 0.9); /* Fond plus sombre */
+        }
+
         /* Animation du dégradé hero */
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
@@ -17,6 +21,7 @@
             100% { background-position: 0% 50%; }
         }
 
+        
         .hero-gradient {
             background: linear-gradient(135deg, #2563eb, #7c3aed, #10b981);
             background-size: 300% 300%;
